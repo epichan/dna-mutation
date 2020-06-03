@@ -1,0 +1,40 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dna-mutation.js",
+  "scripts": {
+    "test": "jest --no-cache ./*",
+    "watch": "jest --no-cache --watch ./*",
+    "lint": "eslint .",
+    "lint-test": "eslint . && jest --no-cache ./* "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epichan/dna-mutation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/epichan/dna-mutation/issues"
+  },
+  "homepage": "https://github.com/epichan/dna-mutation#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-syntax-bigint": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.4",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.0.1",
+    "eslint": "^7.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "jest": "^26.0.1"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "package.json"
+    ]
+  }
+}
