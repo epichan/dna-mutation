@@ -7,7 +7,8 @@
     "test": "jest --no-cache ./*",
     "watch": "jest --no-cache --watch ./*",
     "lint": "eslint .",
-    "lint-test": "eslint . && jest --no-cache ./* "
+    "lint-test": "eslint . && jest --no-cache ./* ",
+    "dev": "nodemon --exec babel-node server.js"
   },
   "repository": {
     "type": "git",
@@ -36,5 +37,10 @@
     "modulePathIgnorePatterns": [
       "package.json"
     ]
+  },
+  "dependencies": {
+    "@babel/node": "^7.10.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
   }
 }

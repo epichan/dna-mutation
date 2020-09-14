@@ -1,11 +1,17 @@
+const {findIt} = require('./findIt')
 
-const makeItHorizontal = (dna) => {
+function makeItHorizontal (dna) {
 
-    let isMutated = dna.map(base => base.split(''));
-    // console.log(isMutated)
+    let maped = dna.map(base => base.split(''));
 
-    console.log(isMutated[0].map((col, i) => isMutated.map(row => row[i])));
+    let isMutated = (maped[0].map((col, i) => maped.map(row => row[i])));
+
+    return findIt(isMutated)
 }
 
-makeItHorizontal(["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]) //[['1', '1', '1'], ['2, '2', '2'], ['3', '3', '3']]
+// makeItHorizontal();
 
+console.log(makeItHorizontal(["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]));
+console.log(makeItHorizontal(['ATGCGA', 'CAGTGC', 'TTATTT', 'AGACGG', 'GCGTCA', 'TCACTG']));
+
+module.exports =  {makeItHorizontal}

@@ -5,10 +5,10 @@ const makeItDiagonal = (dna) => {
     let yLength = dna.length;
     let xLength = dna[0].length;
     let maxLength = Math.max(xLength, yLength);
-    let temp;
+    let temp = [];
 
     for (let k = 0; k <= 2 * (maxLength - 1); ++k) {
-        temp = [];
+        // temp = [];
         for (let y = yLength - 1; y >= 0; --y) {
             let x = k - y;
             if (x >= 0 && x < xLength) {
@@ -20,6 +20,7 @@ const makeItDiagonal = (dna) => {
         }
         console.log(temp)
     }
+    console.log(temp)
 
 }
 
@@ -28,6 +29,21 @@ const makeItDiagonal = (dna) => {
 
 
 makeItDiagonal(["ABCD","EFGH","IJKL"])
+
+/* 
+
+ABCD
+EFGH
+IJKL
+
+A
+EB
+IFC
+JGD
+KH
+L
+
+*/
 
 makeItDiagonal(['ATGCGA', 'CAGTGC', 'TTATTT', 'AGACGG', 'GCGTCA', 'TCACTG'])
 
